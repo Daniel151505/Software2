@@ -25,12 +25,18 @@
                   <div class="container col-md-10 pt-3">
    
                    <form asp-controller="Producto" asp-action="Enviar">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="product"  class="control-label"></label>
                 <input asp-for="product" class="form-control"/>
                 <span asp-validation-for="product" class="text-danger"></span>
             </div class="form-group">
+
+            <div class="form-group">
+                <label class="control-label">Codigo</label>
+                <input asp-for="color" class="form-control"/>
+                <span asp-validation-for="color" class="text-danger"></span>
+
+            </div>
 
             <div class="form-group">
                 <label asp-for="color"  class="control-label"></label>
@@ -41,17 +47,15 @@
 
             <div class="form-group">
               <label asp-for="tallas" class="control-label"></label> 
-              <input asp-for="tallas" class="form-control" />
+              
+              <select name="" id="" class="form-control">
+                <option value="">36</option>
+                <option value="">37</option>
+                <option value="">38</option>
+                <option value="">39</option>
+              </select>
               <span asp-validation-for="tallas" class="text-danger"></span>
 
-            </div>
-
-             <div class="form-group">
-              <label>Sexo</label>
-              <select name="" id="" class="form-control">
-                <option value="">Masculino</option>
-                <option value="">Femenino</option>
-              </select>
             </div>
 
             <div class="form-group">
@@ -60,21 +64,26 @@
               <span asp-validation-for="cantidad" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-              <label asp-for="modelo"  class="control-label"></label>
-              <input asp-for="modelo" class="form-control"/>
-              <span asp-validation-for="modelo" class="text-danger"></span>
-
-            </div>
-
-            <div class="form-group">
-              <label>Tipo de Calzado</label>
+             <div class="form-group">
+              <label>Sección de Calzado</label>
               <select name="" id="" class="form-control">
                 <option value="">Hombres</option>
                 <option value="">Mujeres</option>
                 <option value="">Niños</option>
               </select>
             </div>
+
+
+            <div class="form-group">
+              <label>Tipo de Calzado</label>
+              <select name="" id="" class="form-control">
+                <option value="">Zapatos</option>
+                <option value="">Zapatillas</option>
+                <option value="">Sandalias</option>
+              </select>
+            </div>
+
+
 
             <div class="form-group text-center" >
               <button type="submit" class="btn btn-success ml-4">Enviar</button>

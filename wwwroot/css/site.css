@@ -199,6 +199,13 @@ a {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    height: 100%;
+  }
+
+  .background_total3{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
     height: 100vh;
   }
 

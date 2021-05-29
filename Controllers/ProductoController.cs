@@ -30,7 +30,34 @@ namespace SOFTWARE1_PROYECTO.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Listar(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public IActionResult Estado()
+        {
+            return View();
+        }
+
+          public IActionResult Salidas()
+        {
+            return View();
+        }
+        
+         public IActionResult ListarHombres()
+        {
+            return View();
+        }
+
+        public IActionResult ListarNIños()
+        {
+            return View();
+        }
+
+         public IActionResult Listar()
+        {
+            return View();
+        }
+        
+
+
+        /*-- public async Task<IActionResult> Listar(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             ViewBag.CurrentSort = sortOrder;
                 var productos = from s in _context.Productos
@@ -58,7 +85,7 @@ namespace SOFTWARE1_PROYECTO.Controllers
                     return View(await PaginatedList<Producto>.CreateAsync(productos.AsNoTracking(), pageNumber ?? 1, pageSize));
 
        
-        }
+        } --*/
                 
         // GET: Contacto/Edit/5
         public async Task<IActionResult> Edit(int? id)
