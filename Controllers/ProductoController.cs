@@ -54,6 +54,11 @@ namespace SOFTWARE1_PROYECTO.Controllers
         {
             return View();
         }
+
+        public IActionResult RegistrarSalidaCalzado()
+        {
+            return View();
+        }
         
 
 
