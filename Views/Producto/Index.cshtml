@@ -1,0 +1,98 @@
+@model SOFTWARE1_PROYECTO.Models.Producto
+
+@{
+    ViewData["Title"] = "Registro de Productos";
+}
+
+
+
+
+
+<div class="background_edit background_total pt-5 text-center">
+ <h1 class="white" >Agrega tus Productos</h1>
+
+
+
+
+<section class="p-4">
+
+  <div class="container-fluid">
+    <div class="row justify-content-center" >
+      <div class="col-xl-5">
+          <div class="card">
+            <div class="justify-content-center text-center">
+              <div class="container justify-content-center text-center">
+                  <div class="container col-md-10 pt-3">
+   
+                   <form asp-controller="Producto" asp-action="Enviar">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="product"  class="control-label"></label>
+                <input asp-for="product" class="form-control"/>
+                <span asp-validation-for="product" class="text-danger"></span>
+            </div class="form-group">
+
+            <div class="form-group">
+                <label asp-for="color"  class="control-label"></label>
+                <input asp-for="color" class="form-control"/>
+                <span asp-validation-for="color" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+              <label asp-for="tallas" class="control-label"></label> 
+              <input asp-for="tallas" class="form-control" />
+              <span asp-validation-for="tallas" class="text-danger"></span>
+
+            </div>
+
+             <div class="form-group">
+              <label>Sexo</label>
+              <select name="" id="" class="form-control">
+                <option value="">Masculino</option>
+                <option value="">Femenino</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label asp-for="cantidad"  class="control-label"></label>
+              <input asp-for="cantidad" class="form-control"/>
+              <span asp-validation-for="cantidad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <label asp-for="modelo"  class="control-label"></label>
+              <input asp-for="modelo" class="form-control"/>
+              <span asp-validation-for="modelo" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de Calzado</label>
+              <select name="" id="" class="form-control">
+                <option value="">Hombres</option>
+                <option value="">Mujeres</option>
+                <option value="">Niños</option>
+              </select>
+            </div>
+
+            <div class="form-group text-center" >
+              <button type="submit" class="btn btn-success ml-4">Enviar</button>
+              <button  class="btn btn-danger"  onclick="window.location='@Url.Action("Listar", "Producto")'" >Cancelar</button>
+            </div>
+
+      </form>
+
+  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</section>
+
+</div>
